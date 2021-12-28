@@ -1,0 +1,564 @@
+:root{
+    /* Colores */
+    --bitcoin-orange: #f7931a;
+    --soft-orange: #ffe9d5;
+    --secondary-blue: #1a9af7;
+    --soft-blue: #e7f5ff;
+    --warm-black: #201e1c;
+    --black: #2b2623;
+    --grey: #bababa;
+    --off-white: #faf8f7;
+    --just-white: #fff;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center; 
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+
+header .logo{
+    width: 150px;
+    height: 24px;
+    margin-top: 40px;
+    align-self: center;
+}
+
+header .container_header{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin-top: 50px;
+    text-align: center;
+    align-self: center;
+}
+
+.container_header h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color:var(--just-white);
+    
+}
+.container_header p{
+    color: var(--soft-orange);
+    margin-top: 24px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+
+.container_header .header_button{
+    position: absolute;
+    top: 270px;
+    left: calc(50% - 118px);
+    display: block;
+    margin-top: 32px;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color: var(--off-white);
+    border: none;
+    border-radius: 4px;
+    /* Sombra*/
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+    color: var(--warm-black);
+    text-decoration: none;
+    
+}
+
+.container_header .header_button span{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 14px;
+    background-image: url('../icons/arrowblack.svg');
+    transform: rotate(90deg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+main{
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+
+main .section1{
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 24px;
+    text-align: center;
+}
+
+.section1 .background_bitcoins{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    background-image: url(../images/bitcoin.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section1 .text{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.text h2{
+    margin-bottom: 24px;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.text p{
+    margin-bottom: 48px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    color: #757575;
+}
+
+.table{
+    display: flex;
+    margin: 0px 40px;
+    height: 380px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.table::-webkit-scrollbar{
+    display: none;
+}
+
+.section1 .table_currency,
+.section1 .table_commissions{
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 30px;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+.section1 .table_currency .currency_table_title{
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    font-weight: bold;
+    color: #FF9536;
+}
+
+.table_currency_info,
+.commissions_table_info{
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.table_currency_info table,
+.commissions_table_info table{
+    width: 100%;
+    height: 100%;
+}
+
+.table_currency_info td,
+.commissions_table_info td{
+    width: 50%;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-weight: 500;
+    color: var(--grey);
+    background-color: var(--just-white);
+}
+
+.table_currency_info .table_top_left,
+.commissions_table_info .table_top_left{
+    border-radius: 8px 0px 0px 0px;
+}
+
+.table_currency_info .table_top_right,
+.commissions_table_info .table_top_right{
+    border-radius: 0px 8px 0px 0px;
+}
+
+.table_currency_info .table_bottom_left,
+.commissions_table_info .table_bottom_left{
+    border-radius: 0px 0px 0px 8px;
+}
+
+.table_currency_info .table_bottom_right,
+.commissions_table_info .table_bottom_right{
+    border-radius: 0px 0px 8px 0px;
+}
+
+.table_currency_info .table_right,
+.commissions_table_info .table_right{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight:normal;
+    color: #757575;
+}
+
+.table_currency_info .down{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 11px;
+    background-image: url(../icons/down.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.table_currency_info .up{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 11px;
+    background-image: url(../icons/up.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.table_currency .currency_table_update{
+    width: 173px;
+    height: 31px;
+    margin: 0 auto;
+    margin-top: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--soft-orange);
+}
+
+.currency_table_update p,
+.commissions_table_update p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+    color: var(--warm-black);
+}
+
+.section1 .table_commissions .commissions_table_title{
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    font-weight: bold;
+    color: var(--secondary-blue);
+}
+
+.table_commissions .commissions_table_update{
+    width: 173px;
+    height: 31px;
+    margin: 0 auto;
+    margin-top: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--soft-blue);
+}
+
+.section2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-width: 320px;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 60px;
+    background-color: var(--warm-black);
+}
+
+.section2 .potato{
+    position: absolute;
+    top: -13px;
+    left: calc(50% - 20px);
+}
+
+.section2 .text_section2{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    text-align: center;
+    margin-top: 64px;
+    align-self: center;
+} 
+
+.section2 .text_section2 h2{
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.section2 .text_section2 p{
+    margin-top: 24px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    color: #808080;
+}
+
+.cards_benefits .benefits{
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 32px;
+    background-color: #282623;
+    padding: 20px;
+    align-self: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+}
+
+.benefits h2{
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.benefits p{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    color: #808080;
+}
+
+.benefits i{
+    display: inline-block;
+}
+
+.icons_benefits{
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section2 .clock{
+    background-image: url(../icons/clock.svg);
+    margin-bottom: 12px;
+}
+
+.section2 .view{
+    background-image: url(../icons/eye.svg);
+    margin-bottom: 14px;
+}
+
+.section2 .dollar{
+    background-image: url(../icons/dollar.svg);
+    margin-bottom: 15px;
+}
+
+.section2 .verified{
+    background-image: url(../icons/check_circle.svg);
+    margin-bottom: 12px;
+}
+
+.section3{
+    width: 100%;
+    height: 50vh;
+    min-width: 320px;
+    background-image: url(../images/bitcoinbaby2x.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.section3 h2{
+    padding-top: 60px;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-weight: 700;
+    color: #fff;    
+}
+
+.section4{
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.section4_headertext{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.section4_headertext h2{
+    padding-top: 50px;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-weight: bold;
+    color: var(--warm-black);
+}
+
+.section4_headertext p{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    color: #757575;
+}
+
+.plan{
+    display: flex;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.plan::-webkit-scrollbar{
+    display: none;
+}
+
+
+.plan_container_card{
+    position: relative;
+    scroll-snap-align: center;
+    width: 65%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 5px 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.recommended{
+    position: absolute;
+    left: calc(50% - 51px);
+    top: -15px;
+    width: 101px;
+    height: 31px;
+    padding: 8px;
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.plan_card_title{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.plan_card_price{
+    padding: 5px 0;
+    font-size: 5.2rem;
+    line-height: 6.3rem;
+    font-weight: bold;
+    font-family: var(--black);
+}
+
+.plan_card_price span{
+    font-size: 1.2rem;
+    font-weight: 300;
+    vertical-align: 25px;
+}
+
+.plan_card_saving{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color:#757575 ;
+}
+
+.plan_card_ca{
+    width: 151px;
+    height: 48px;
+    margin-top: 16px;
+    background-color: #faf8f7;
+    border-style: none;
+    border: 2px solid #F7931A;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+    color: var(--warm-black);
+}
+
+.plan_card_ca span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../icons/arrow-pay.svg);
+    vertical-align: text-bottom;
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+footer section{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .left ul{
+    list-style: none;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight:500;
+}
+
+.left li{
+    margin: 10px 0;
+}
+
+.left li a{
+    text-decoration: none;
+    color: var(--just-white);
+}
+
